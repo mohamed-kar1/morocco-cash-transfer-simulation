@@ -1,0 +1,214 @@
+{
+  "files": {
+    "household": "Ménage_ENCDM_2014_en_format_SAV.sav",
+    "individual": "Individus__ENCDM_2014_en_format_SAV.sav"
+  },
+  "households": {
+    "n_households": 15970,
+    "n_columns": 792,
+    "id_unique": true,
+    "size": {
+      "n_bad": 0,
+      "min": 1.0,
+      "max": 26.0
+    },
+    "weights": {
+      "sum_w_hh": 7190456.0,
+      "sum_w_ind": 33579281.0,
+      "sum_w_hh_times_size": 34071538.0,
+      "ratio_ind_over_hh_size_min": 0.6774193548387096,
+      "ratio_ind_over_hh_size_mean": 0.988095562915525,
+      "ratio_ind_over_hh_size_max": 4.520833333333333
+    },
+    "dam": {
+      "min": 4286.0,
+      "median": 58097.9,
+      "max": 1224977.4
+    },
+    "dap_equals_dam_over_size_max_gap": 0.0,
+    "note_check": {
+      "n_households": {
+        "note": 15970,
+        "data": 15970,
+        "ok": true
+      },
+      "sum_w_hh": {
+        "note": 7190456,
+        "data": 7190456.0,
+        "ok": true
+      },
+      "mean_dam_w_hh": {
+        "note": 76317.23,
+        "data": 76317.22972409353,
+        "ok": true
+      },
+      "mean_dap_w_ind": {
+        "note": 15875.68,
+        "data": 15875.683241927672,
+        "ok": true
+      },
+      "mean_dam_w_ind_alt": {
+        "note": null,
+        "data": 79263.79642730518
+      },
+      "mean_dap_w_hh_alt": {
+        "note": null,
+        "data": 19413.141028390117
+      }
+    },
+    "poverty": {
+      "n_poor": 499,
+      "n_vulnerable": 1499,
+      "n_poor_and_vulnerable": 0,
+      "poor_pct_w_hh": 2.998307756837675,
+      "poor_pct_w_ind": 4.778964743170052,
+      "vulnerable_pct_w_ind": 12.469114511415537
+    },
+    "implied_cut_by_milieu": {
+      "Urbain": {
+        "poor_max_dap": 4654.64,
+        "nonpoor_min_dap": 4676.333333333333
+      },
+      "Rural": {
+        "poor_max_dap": 4310.033333333334,
+        "nonpoor_min_dap": 4317.0
+      }
+    },
+    "milieu": [
+      {
+        "code": 1.0,
+        "label": "Urbain",
+        "n_households": 10380,
+        "sum_w_hh": 4706309.0,
+        "poor_pct_w_ind": 1.6388061168906682,
+        "small_cell": false
+      },
+      {
+        "code": 2.0,
+        "label": "Rural",
+        "n_households": 5590,
+        "sum_w_hh": 2484147.0,
+        "poor_pct_w_ind": 9.484191971736326,
+        "small_cell": false
+      }
+    ],
+    "region": [
+      {
+        "code": 1.0,
+        "label": "Tanger-Tétouan-Al Hoceïma",
+        "n_households": 1690,
+        "sum_w_hh": 785705.0,
+        "poor_pct_w_ind": 2.1744207866616088,
+        "small_cell": false
+      },
+      {
+        "code": 2.0,
+        "label": "Oriental",
+        "n_households": 1247,
+        "sum_w_hh": 485985.0,
+        "poor_pct_w_ind": 5.3428582251194054,
+        "small_cell": false
+      },
+      {
+        "code": 3.0,
+        "label": "Fès-Meknès",
+        "n_households": 1980,
+        "sum_w_hh": 904063.0,
+        "poor_pct_w_ind": 5.156062359466063,
+        "small_cell": false
+      },
+      {
+        "code": 4.0,
+        "label": "Rabat-Salé-Kénitra",
+        "n_households": 2159,
+        "sum_w_hh": 996500.0,
+        "poor_pct_w_ind": 3.7691857753000386,
+        "small_cell": false
+      },
+      {
+        "code": 5.0,
+        "label": "Béni Mellal-Khénifra",
+        "n_households": 1372,
+        "sum_w_hh": 512154.0,
+        "poor_pct_w_ind": 9.254380145446733,
+        "small_cell": false
+      },
+      {
+        "code": 6.0,
+        "label": "Casablanca-Settat",
+        "n_households": 3091,
+        "sum_w_hh": 1530262.0,
+        "poor_pct_w_ind": 2.0304697924869037,
+        "small_cell": false
+      },
+      {
+        "code": 7.0,
+        "label": "Marrakech-Safi",
+        "n_households": 1754,
+        "sum_w_hh": 914934.0,
+        "poor_pct_w_ind": 5.392131181602402,
+        "small_cell": false
+      },
+      {
+        "code": 8.0,
+        "label": "Drâa-Tafilalet",
+        "n_households": 628,
+        "sum_w_hh": 274352.0,
+        "poor_pct_w_ind": 14.643637766784698,
+        "small_cell": false
+      },
+      {
+        "code": 9.0,
+        "label": "Souss-Massa",
+        "n_households": 1171,
+        "sum_w_hh": 591990.0,
+        "poor_pct_w_ind": 5.0751899515802315,
+        "small_cell": false
+      },
+      {
+        "code": 10.0,
+        "label": "Guelmim-Oued Noun",
+        "n_households": 244,
+        "sum_w_hh": 88662.0,
+        "poor_pct_w_ind": 6.45318245323806,
+        "small_cell": true
+      },
+      {
+        "code": 11.0,
+        "label": "Laâyoune-Sakia El Hamra",
+        "n_households": 329,
+        "sum_w_hh": 77083.0,
+        "poor_pct_w_ind": 0.7480580838667166,
+        "small_cell": true
+      },
+      {
+        "code": 12.0,
+        "label": "Dakhla-Oued Ed Dahab",
+        "n_households": 305,
+        "sum_w_hh": 28766.0,
+        "poor_pct_w_ind": 0.3188467547223406,
+        "small_cell": true
+      }
+    ],
+    "min_cell": 500,
+    "errors": [],
+    "warnings": [
+      "Régions sous 500 ménages (non pondérés) : Guelmim-Oued Noun, Laâyoune-Sakia El Hamra, Dakhla-Oued Ed Dahab."
+    ]
+  },
+  "individuals": {
+    "n_persons": 75691,
+    "households_without_individuals": 0,
+    "individuals_without_household": 0,
+    "size_matches_pct": 100.0,
+    "age": {
+      "n_missing": 0,
+      "min": 0.0,
+      "max": 98.0,
+      "n_under_15": 20312,
+      "n_under_18": 24515
+    },
+    "errors": [],
+    "warnings": []
+  }
+}

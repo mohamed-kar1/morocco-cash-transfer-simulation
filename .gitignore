@@ -1,0 +1,29 @@
+# Microdonnées brutes : ne jamais committer (licences, volume)
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/README.md
+data/interim/*
+!data/interim/.gitkeep
+
+# Données dérivées des microdonnées (reproductibles avec build_population.py).
+# Décommenter si le dépôt est public ou si la licence des sources l'impose.
+# data/processed/population.csv
+# data/processed/person_weights.csv
+
+# Sorties générées de la mock (reproductibles : python -m src.analysis.export --mock)
+data/mock/scenario_metrics_mock.csv
+data/mock/group_impacts_mock.csv
+data/mock/metric_definitions_mock.csv
+data/mock/analysis_metadata_mock.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Éditeurs et systèmes
+.DS_Store
+.idea/
+.vscode/

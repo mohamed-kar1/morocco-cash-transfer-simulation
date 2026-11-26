@@ -1,0 +1,21 @@
+household_id,household_weight,region,urban_rural,household_size,children_count,baseline_consumption,equivalence_factor,equiv_consumption,eligible_baseline
+H001,620,Béni Mellal-Khénifra,rural,6,3,2000.00,6.0,333.33,1
+H002,480,Drâa-Tafilalet,rural,5,2,2166.67,5.0,433.33,1
+H003,750,Casablanca-Settat,urbain,2,0,666.67,2.0,333.33,1
+H004,910,Casablanca-Settat,urbain,4,2,2500.00,4.0,625.00,0
+H005,540,Rabat-Salé-Kénitra,urbain,3,1,1500.00,3.0,500.00,1
+H006,430,Oriental,rural,7,4,3333.33,7.0,476.19,1
+H007,680,Fès-Meknès,urbain,5,3,1833.33,5.0,366.67,1
+H008,390,Marrakech-Safi,rural,4,2,4166.67,4.0,1041.67,0
+H009,820,Souss-Massa,urbain,1,0,1250.00,1.0,1250.00,0
+H010,700,Tanger-Tétouan-Al Hoceïma,urbain,6,3,5000.00,6.0,833.33,0
+H011,510,Béni Mellal-Khénifra,rural,9,5,3000.00,9.0,333.33,1
+H012,450,Drâa-Tafilalet,rural,3,1,1750.00,3.0,583.33,0
+H013,260,Laâyoune-Sakia El Hamra,urbain,4,2,3750.00,4.0,937.50,0
+H014,180,Dakhla-Oued Ed Dahab,urbain,2,0,1000.00,2.0,500.00,1
+H015,300,Guelmim-Oued Noun,rural,5,3,2500.00,5.0,500.00,1
+H016,560,Casablanca-Settat,urbain,12,7,5833.33,12.0,486.11,1
+H017,880,Rabat-Salé-Kénitra,urbain,2,0,10000.00,2.0,5000.00,0
+H018,470,Fès-Meknès,rural,6,3,2083.33,6.0,347.22,1
+H019,640,Oriental,urbain,3,2,1666.67,3.0,555.56,1
+H020,410,Souss-Massa,rural,4,1,2333.33,4.0,583.33,0
