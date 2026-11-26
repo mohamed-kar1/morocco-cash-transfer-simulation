@@ -26,4 +26,5 @@ __pycache__/
 # Éditeurs et systèmes
 .DS_Store
 .idea/
-.vscode/
+.vscode/data/processed/population.csv
+data/processed/person_weights.csv
