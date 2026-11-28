@@ -125,4 +125,5 @@ Propriétaire : P1 = Personne 1, P2 = Personne 2, P1+P2 = décision commune.
 - 2026-11-23 : D1 décidée (P1) après comparaison avec le RGPH : ENCDM seule, pas d'IPF.
 - 2026-11-23 : `population.csv` construit par `src/population/build_population.py` : 15 970 lignes, somme des poids 7 190 456, 499 ménages `Pauvre`, 1 499 `Vulnérable`, 1 998 éligibles (D6), 12 régions. Aucune exclusion de ménage.
 - 2026-11-25 : D12, D13, D14, D15 décidées (P1) ; D16 ajoutée et décidée. Contrat `population.csv` inchangé ; `person_weights.csv` (`coef_indiv`, somme 33 579 281) produit par `build_population.py`.
+- 2026-11-28 : fichier RGPH Individu (jamais utilisé, 307 Mo) supprimé du poste ; RGPH non versionné sur GitHub (volume), ENCDM 2014 versionnée ; `data_sources.md` et `data/raw/README.md` mis à jour.
 - 2026-11-26 : partie B écrite : `metrics.py`, `targeting.py`, `subgroups.py`, `export.py` avec leurs tests ; D17 décidée (P1).

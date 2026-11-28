@@ -10,7 +10,7 @@ Les schémas CSV partagés sont des contrats figés. Aucune modification sans ac
 
 ## Structure
 ```
-data/raw/          microdonnées brutes (ignorées par Git, jamais modifiées)
+data/raw/          microdonnées brutes, jamais modifiées (ENCDM 2014 versionnée ; RGPH 2014 ignorée par Git)
 data/interim/      fichiers intermédiaires
 data/processed/    sorties validées (population.csv, person_weights.csv, puis les sorties de la partie B)
 data/mock/         fixtures conformes aux contrats
@@ -33,7 +33,13 @@ pip install -r requirements.txt
 ```
 
 ## Données
-Les fichiers sources ne sont pas dans le dépôt. Voir `data/raw/README.md` pour savoir où les placer.
+Source : ENCDM 2014 et RGPH 2014, Haut-Commissariat au Plan (HCP), page « Micro données - Open Data ». Conditions de réutilisation à confirmer sur la page du HCP.
+
+- **ENCDM 2014** (fichiers Ménage et Individus, nomenclature, note technique, environ 37 Mo) : dans le dépôt, `data/raw/encdm_2014/`. Elle suffit à reproduire `population.csv`.
+- **RGPH 2014** : pas dans le dépôt (volume). Seul le fichier Ménage au format SPSS (environ 53 Mo) est utilisé, par `compare_rgph` (contrôle de représentativité) ; à télécharger sur le site du HCP et à placer dans `data/raw/rgph_2014/`. Le fichier Individu (307 Mo) n'est pas utilisé.
+- `population.csv` est un fichier dérivé, calculé par `build_population.py`. `person_weights.csv` (fichier interne de l'analyse) n'est pas versionné.
+
+Voir aussi `data/raw/README.md`.
 
 ## Première étape : inspection de l'ENCDM 2014
 ```
@@ -73,5 +79,5 @@ Les tests sur les vraies données (construction, taux de pauvreté de départ) s
 ## Flux de travail
 - Une branche par personne (par exemple `person1/population`), des fixtures mock conformes aux contrats tant que l'autre composant n'est pas prêt.
 - Jalons : M1 sources et définitions, M2 schémas et mocks figés, M3 développement et tests, M4 échange de sorties et tests de contrat, M5 intégration, M6 expériences et sensibilité, M7 rapport et documentation.
-- Ne pas committer de microdonnées restreintes. Respecter les licences des sources.
+- Ne pas committer de fichier de plus de 100 Mo (limite de GitHub) ni de microdonnées dont la licence l'interdit. Respecter les licences des sources.
 - Les décisions ouvertes sont suivies dans `docs/pending_decisions.md`.

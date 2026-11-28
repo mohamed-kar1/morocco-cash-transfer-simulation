@@ -1,14 +1,18 @@
-# Microdonnées brutes : ne jamais committer (licences, volume)
+# Microdonnées brutes : seules celles de l'ENCDM 2014 sont versionnées (licence ouverte, volume faible)
 data/raw/*
 !data/raw/.gitkeep
 !data/raw/README.md
+# ENCDM 2014 (environ 37 Mo, données ouvertes du HCP) : versionnée. RGPH 2014 (fichier Ménage, 53 Mo, contrôle seulement) : ignoré.
+!data/raw/encdm_2014/
 data/interim/*
 !data/interim/.gitkeep
 
 # Données dérivées des microdonnées (reproductibles avec build_population.py).
-# Décommenter si le dépôt est public ou si la licence des sources l'impose.
+# person_weights.csv : fichier interne de la partie analyse, jamais poussé.
+data/processed/person_weights.csv
+# population.csv : suivi par défaut (dépôt privé partagé avec Personne 2).
+# Dépôt public ou licence restrictive : décommenter la ligne suivante.
 # data/processed/population.csv
-# data/processed/person_weights.csv
 
 # Sorties générées de la mock (reproductibles : python -m src.analysis.export --mock)
 data/mock/scenario_metrics_mock.csv
@@ -26,5 +30,4 @@ __pycache__/
 # Éditeurs et systèmes
 .DS_Store
 .idea/
-.vscode/data/processed/population.csv
-data/processed/person_weights.csv
+.vscode/

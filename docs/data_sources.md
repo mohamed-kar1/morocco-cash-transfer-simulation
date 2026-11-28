@@ -27,7 +27,8 @@ Légende des étiquettes :
 | Monnaie et prix | Dirhams (MAD) courants, année 2014 [Documenté] |
 | Variable de bien-être | `DAM` (dépense annuelle du ménage) et `DAP` (dépense annuelle par personne, égale à `DAM / taille`) [Documenté, Observé] |
 | Format | SPSS (.sav) |
-| Accès | Données ouvertes, site du HCP (page Micro données - Open Data). Aucune inscription constatée. Accès le 2026-11-22 |
+| Accès | Données ouvertes, site du HCP (page Micro données - Open Data). Aucune inscription constatée. Accès le 2026-11-22. Conditions de réutilisation : à confirmer sur la page du HCP |
+| Dépôt GitHub | **Versionnée** dans `data/raw/encdm_2014/` (environ 37 Mo) : elle suffit à reproduire `population.csv`. Les fichiers dérivés `population.csv` (versionné) et `person_weights.csv` (interne, non versionné) sont décrits dans `data_dictionary.md` |
 | Documentation | Note technique (métadonnées, 01/11/2019), nomenclature Bien et Service 2014, questionnaires ménage (fr, ar) et dépense (ar) |
 | Citation suggérée par le HCP | Haut-commissariat au Plan (2019). Les données sur la consommation et les dépenses des ménages au Maroc. Fichier de microdonnées à grande diffusion (FMGD). Web. |
 | Fichiers locaux | `Ménage_ENCDM_2014_en_format_SAV.sav`, `Individus__ENCDM_2014_en_format_SAV.sav` (ne pas committer, voir `.gitignore`) |
@@ -56,7 +57,7 @@ Légende des étiquettes :
 
 ---
 
-## 2. RGPH 2014 (HCP) : source secondaire, éventuelles marges de contrôle
+## 2. RGPH 2014 (HCP) : contrôle de représentativité, non utilisé pour construire `population.csv`
 
 | Champ | Valeur |
 |---|---|
@@ -65,11 +66,13 @@ Légende des étiquettes :
 | Taille | Échantillon de 10 % ; 730 099 ménages, 3 341 426 personnes, 85 variables [Documenté par le HCP] |
 | Formats | SPSS, STATA, texte |
 | Contenu | Démographie, éducation, emploi, logement. Aucune variable de consommation dans les fichiers Ménage et Individu [Observé, 23 nov.] |
-| Fichiers locaux | Fichier Ménage (SPSS, STATA, texte), fichier Individu (SPSS, texte), questionnaires (fr, ar) |
+| Fichiers utilisés | Fichier Ménage au format SPSS (53 Mo), lu par `compare_rgph` (variables `REG`, `MIL`, `TAILLE`, `MEN.TYPE`, `PDS`) |
+| Fichiers non utilisés | Fichier Individu (307 Mo) : téléchargé, jamais utilisé, supprimé du poste le 2026-11-28 ; autres formats (STATA, texte) et questionnaires non conservés |
+| Dépôt GitHub | **Non versionné** : volume (le fichier Individu dépasse la limite de 100 Mo de GitHub) et rôle secondaire. À télécharger sur le site du HCP et à placer dans `data/raw/rgph_2014/` pour relancer `compare_rgph` ; voir `data/raw/README.md` |
 | Rôle | Contrôle de représentativité de l'ENCDM ; pas de calibration IPF (D1) |
 | État | Inspecté le 23 nov. : comparaison agrégée avec l'ENCDM (`outputs/inspection/rgph_vs_encdm.md`) |
 
-## 3. IPUMS International, Maroc : secours
+## 3. IPUMS International, Maroc : écarté
 
 | Champ | Valeur |
 |---|---|
@@ -77,7 +80,7 @@ Légende des étiquettes :
 | Taille | 3 341 426 enregistrements de personnes [Documenté, catalogue Banque mondiale] |
 | Contenu | Variables démographiques, éducation, emploi, logement ; aucune variable de consommation ou de revenu repérée dans la liste consultée |
 | Accès | Inscription et licence IPUMS ; redistribution à des tiers interdite |
-| État | Non téléchargé ; recensement identique au RGPH 2014 du HCP, donc non prioritaire |
+| État | Non téléchargé, non utilisé ; recensement identique au RGPH 2014 du HCP, donc inutile |
 
 ## 4. Documents d'appui
 
